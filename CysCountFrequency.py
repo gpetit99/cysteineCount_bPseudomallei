@@ -24,21 +24,17 @@ import matplotlib.pyplot as plt
 
 
 ##opening fast file containing all the proteins of Bps mature core genome (protein with signal sequences and all core genome)
-##core genome            
-path_matureSequence='/Users/s5108513/Desktop/Work_doc/BioInfo/prot_core_genome_complete_mature.fasta' ## mature sequences 
-path_allSequences='/Users/s5108513/Desktop/Work_doc/BioInfo/prot_core_genome_complete.fasta'  ## complete core genome
+           
+path_matureSequence='/Path/to/Mature/sequences.fasta' ## mature sequences 
+path_allSequences='/Path/to/all/sequences.fasta'  ## complete core genome
 
 """
  insert you path to data for the extra cytoplasmic protein and for the cytoplasmic ones\
 reads all the sequences concatenated in Fasta file starting with '>' before each protein and ending with a stop codon "*"
-For the extra cytoplasmic proteins, the files that come of SignalP5.0 concatenated together work perfeclty
-(Submit sequences, download the results as fasta and use the "cat" to assemble them all in one file )
+For the extra cytoplasmic proteins, the files that come from SignalP5.0 concatenated together work perfeclty
+(Submit sequences, download the results as fasta and use the "cat" commande  to assemble them all in one file )
 
 """
-## pangenome
-#path_matureSequence='/Users/s5108513/Desktop/Work_doc/BioInfo/wholeGenome/pan_genome_19991_mature.fasta'  #mature sequences
-#path_allSequences='/Users/s5108513/Desktop/Work_doc/BioInfo/wholeGenome/pan_genome_19991.fasta'  ## complete core genome
-
 
 ## putting all the mature sequences in a dataframes
 ## some tidying up required to have the sequence, gene name and identifier
@@ -120,7 +116,7 @@ normal_extra=normal_extra.fillna(value=0)
 plt.figure(0)
 plt.plot(normal_extra[0:15])
  ## Limits ofthe graph (0:15) can be changed but remember that there are very few proteins with more than 
-## 10-12 cysteines meaning that the at some point one just get a peak for single proteins 
+## 10-12 cysteines meaning that at some point each single protein will generate a peak  
 
 
 
